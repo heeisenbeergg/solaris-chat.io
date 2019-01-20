@@ -6,9 +6,4 @@ module.exports = (app) => {
         chat_controllers.startChat(app, req, res);
     });
 
-    app.get('/chat', (req, res) => {
-        chat_controllers.startChat(app, req, res);
-    });
-
-
 }

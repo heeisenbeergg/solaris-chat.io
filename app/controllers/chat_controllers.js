@@ -14,15 +14,21 @@ module.exports = {
             res.render('index', { validation: erros });
         }
    
-        io.emit(
+        io.to(dataForm.channel).emit(
             'userConnected',
             { 
                 name: dataForm.name,
+                channel: dataForm.channel,
                 message: 'Acabou de entrar no chat!'
             }
         );
         
-        res.render('chat', {user: dataForm.name});
+        res.render('chat', 
+            {
+                user: dataForm.name,
+                channel: dataForm.channel
+            }
+        );
    
     }
 
