@@ -5,37 +5,37 @@ module.exports = (app, server) => {
     app.set('io', io);
 
     io.on('connection', (socket) => {
-        console.log('Usuário conectou!');
+        console.log('User connected!');
     
         socket.on('disconnect', () => {
-            console.log('Usuário desconectou!');
+            console.log('User disconnected!');
         });
     
-        socket.on('enviarMsgServidor', (data) => {
+        socket.on('sendMsgServer', (data) => {
        
-            socket.emit('usuarioConectou', 
+            socket.emit('userConnected', 
                         {
-                            apelido: data.apelido,
-                            mensagem: data.mensagem
+                            name: data.name,
+                            message: data.message
                         }
             );
     
-            socket.broadcast.emit('usuarioConectou', 
+            socket.broadcast.emit('userConnected', 
                         {
-                            apelido: data.apelido,
-                            mensagem: data.mensagem
+                            name: data.name,
+                            message: data.message
                         }
             );
     
-            socket.emit('participantes', 
+            socket.emit('participants', 
                         {
-                            apelido: data.apelido
+                            name: data.name
                         }
             );
     
-            socket.broadcast.emit('participantes', 
+            socket.broadcast.emit('participants', 
                         {
-                            apelido: data.apelido
+                            name: data.name
                         }
             );
     

@@ -13,7 +13,7 @@
                     <div class="panel panel-default">
                     	<div class="panel-heading">                                
                             <div class="row-fluid user-row">
-                                <img src="images/multiroom_chat_2.png" class="img-responsive" alt="Multiroom Chat"/>
+                                <img src="images/multiroom_chat_2.png" class="img-responsive" alt="Chat Socket.io"/>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -22,27 +22,27 @@
                                     <label class="panel-login">
                                         <div class="login_result"></div>
                                     </label>
-                                    <input class="form-control" placeholder="Nome ou apelido" name="apelido" id="apelido" type="text">
+                                    <input class="form-control" placeholder="Nome" name="name" id="name" type="text">
                                     <label>Canal: </label>
                                     <select name="channel" id="channel" width="30%">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                     </select>
-                                    <input class="btn btn-lg btn-success btn-block" type="submit" id="entrar" value="Entrar »">
+                                    <input class="btn btn-lg btn-success btn-block" type="submit" id="enter" value="Entrar »">
                                 </fieldset>
                             </form>
                         </div>
                     </div>
                     <div>
-                        <% if( validacao.length > 0 ) { %>
+                        <% if( validation.length > 0 ) { %>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="alert alert-danger">
                                         <strong>Atenção</strong>
                                         <ul>
-                                            <% for(var i = 0; i < validacao.length; i++) { %>
-                                                <li><%= validacao[i].msg %></li>
+                                            <% for(var i = 0; i < validation.length; i++) { %>
+                                                <li><%= validation[i].msg %></li>
                                             <% } %>
                                         </ul>
                                     </div>

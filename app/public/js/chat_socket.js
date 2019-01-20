@@ -1,39 +1,40 @@
 const socket = io('http://localhost:9000');
 
-$('#enviar_msg').click( () => {
+$('#send_msg').click( () => {
 
-    let apelido = $('#apelido').val();
-    let mensagem = $('#mensagem').val();
+    let name = $('#name').val();
+    let message = $('#message').val();
 
-    socket.emit('enviarMsgServidor', 
-                { apelido: apelido,
-                    mensagem: mensagem
+    socket.emit('sendMsgServer', 
+                { 
+                    name: name,
+                    message: message
                 }
     );
 
-    $('#mensagem').val('');
+    $('#message').val('');
 
 });			
 
-socket.on('usuarioConectou', (data) => {
+socket.on('userConnected', (data) => {
     
-    let html = '<div class="dialogo">';
-            html +=	'<h4>' + data.apelido + '</h4>';
-            html +=	'<p>' + data.mensagem + '</p>';
+    let html = '<div class="dialogue">';
+            html +=	'<h4>' + data.name + '</h4>';
+            html +=	'<p>' + data.message + '</p>';
         html += '</div>';
 
-    $('#conversa').append(html);
+    $('#conversation').append(html);
 
     window.scrollTo(0, document.body.scrollHeight);
 
 });
 
-socket.on('participantes', (data) => {
+socket.on('participants', (data) => {
 
-    let html = '<span class="participante">';
-            html += data.apelido;
+    let html = '<span class="participant">';
+            html += data.name;
         html += '</span>';
 
-    $('#pessoas').append(html);
+    $('#peoples').append(html);
 
 });

@@ -45,13 +45,13 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
-.linha_usuario{
+.user_line {
     display: block;
     margin-top:10px;
     padding:5px;
 }
 
-.linha_usuario img{
+.user_line img {
     margin-right:5px;
     margin-top:-7px;
 }
@@ -60,26 +60,26 @@ img {
     vertical-align: middle;
 }
 
-.conversa{
+.conversation {
 	margin-top:70px;
 	margin-bottom: 70px;
 }
 
-.participantes{
+.participants {
 	margin-top:70px;
 	margin-bottom: 70px;
 }
 
-.participante{
+.participant {
 	display:block;
 	margin-bottom:15px;
 }
 
-.participante img{
+.participant img {
 	margin-top:-10px;
 }
 
-.dialogo{
+.dialogue {
 	width:100%;
 	height:auto;
 	margin-bottom:15px;
@@ -87,13 +87,13 @@ img {
 	background:#D8F0FE;
 }
 
-.dialogo h4{
+.dialogue h4 {
 	font-size:15px;
 	font-weight: bold;
 	color:#8B7777;
 }
 
-.dialogo p{
+.dialogue p {
 	font-size:12px;
 	padding-left:15px;
 	color:#8B7777;

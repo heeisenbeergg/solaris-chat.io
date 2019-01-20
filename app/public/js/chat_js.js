@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    $("#exibe_chat").click(function(){
-        $("#conversa").show();
-        $("#participantes").hide();
+    $("#show_chat").click(function(){
+        $("#conversation").show();
+        $("#participants").hide();
         ocultaNavbar();
     });
     
-    $("#exibe_participantes").click(function(){
-        $("#participantes").show();
-        $("#conversa").hide();
+    $("#show_participants").click(function(){
+        $("#participants").show();
+        $("#conversation").hide();
         ocultaNavbar();
     });
 });

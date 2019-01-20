@@ -22,36 +22,36 @@
 				<div class="collapse navbar-collapse" id="navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="#" id="exibe_chat">Chat</a>
+							<a href="#" id="show_chat">Chat</a>
 						</li>
 						<li>
-							<a href="#" id="exibe_participantes">Participantes</a>
+							<a href="#" id="show_participants">Participantes</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		<div class="container">
-            <div class="row conversa" id="conversa">
+            <div class="row conversation" id="conversation">
 				<div class="col-md-1"></div>
 				<div class="col-md-1"></div>
             </div>
-			<div class="row participantes" id="participantes" style="display:none">
+			<div class="row participants" id="participants" style="display:none">
 				<div class="col-md-1"></div>
-				<div class="col-md-10" id="pessoas">
+				<div class="col-md-10" id="peoples">
 				</div>
 				<div class="col-md-1"></div>
             </div>
         </div>
 		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 			<div class="container">
-				<div class="panel-body campo-mensagem">
+				<div class="panel-body field-message">
 					<div class="col-md-12">
 						<div class="input-group">
-							<input type="text" id="mensagem" class="form-control" placeholder="Mensagem">
-							<input type="hidden" id="apelido" value="<%=usuario%>" >
+							<input type="text" id="message" class="form-control" placeholder="Mensagem">
+							<input type="hidden" id="name" value="<%=user%>" >
 							<span class="input-group-btn">
-								<button class="btn btn-default" type="button" id="enviar_msg">Enviar</button>
+								<button class="btn btn-default" type="button" id="send_msg">Enviar</button>
 							</span>
 						</div>
 					</div>

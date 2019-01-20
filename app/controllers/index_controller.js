@@ -1,7 +1,7 @@
 module.exports = {
     
     index: (app, req, res) => {
-        res.render('index', { validacao: {} });
+        res.render('index', { validation: {} });
     }
 
 }
