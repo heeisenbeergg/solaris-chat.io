@@ -1,6 +1,6 @@
 module.exports = {
 
-    iniciaChat: (app, req, res) => {
+    startChat: (app, req, res) => {
         
         const dataForm = req.body;
         const io = app.get('io');
