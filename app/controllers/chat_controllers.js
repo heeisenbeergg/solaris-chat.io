@@ -5,8 +5,8 @@ module.exports = {
         const dataForm = req.body;
         const io = app.get('io');
 
-        req.assert('name', 'Nome ou apelido é obrigatório!').notEmpty();
-        //req.assert('apelido ', 'Nome ou apelido deve conter entre 3 e 15 caracteres').len(3, 15);
+        req.assert('name', 'Nome é obrigatório!').notEmpty();
+        //req.assert('name ', 'Nome deve conter entre 3 e 15 caracteres').len(3, 15);
 
         const erros = req.validationErrors();
 
