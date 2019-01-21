@@ -1,7 +1,8 @@
 const app = require('./config/server');
+const port = process.env.PORT || 9000;
 
-const server = app.listen(9000, () => {
-                console.log("Rodando na 9000. \nhttp://localhost:9000");
+const server = app.listen(port, () => {
+                console.log('Rodando na ' + port + '. \nhttp://localhost:' + port);
             });
 
 const socket = require('./config/socket')(app, server);
