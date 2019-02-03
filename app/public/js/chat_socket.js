@@ -1,4 +1,4 @@
-const socket = io('http://localhost:9000');
+const socket = io('https://solaris-chat.herokuapp.com');
 
 $('#send_msg').click( () => {
 
