@@ -1,7 +1,7 @@
 module.exports = (app) => {
 
     app.post('/chat', (req, res) => {
-        app.app.controllers.chat_controllers.startChat(app, req, res);
+        app.controllers.chat_controllers.startChat(app, req, res);
     });
 
 }
